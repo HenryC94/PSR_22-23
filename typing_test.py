@@ -126,13 +126,13 @@ def stats(test_start_time, test_start_date, number_of_types, number_of_hits, inp
             average_hit = test_duration / number_of_hits
 
         else:
-            average_hit = 0
+            average_hit = str("NONE")
 
         if number_of_types - number_of_hits > 0 :
             average_miss = test_duration / (number_of_types - number_of_hits)
 
         else:
-            average_miss = 0
+            average_miss = str("NONE")
 
         resultado = {"Accuracy" : accuracy,
                     "Number of hits" : number_of_hits,

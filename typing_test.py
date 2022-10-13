@@ -105,7 +105,7 @@ def typeTest(mv, utm):
 def stats(test_start_time, test_start_date, number_of_types, number_of_hits, inputs, utm, mv):
       
         test_end_time = time.time()
-        test_duration = test_end_time - test_start_time
+        test_duration = round(test_end_time - test_start_time, 2)
         print(Fore.LIGHTBLUE_EX + "Test finished!" + Fore.WHITE)
 
         if utm == True:
@@ -115,21 +115,21 @@ def stats(test_start_time, test_start_date, number_of_types, number_of_hits, inp
         test_end_date = test_end_date.strftime("%a %-d %b %-H:%M:%S %Y")
 
         if number_of_types != 0 :
-            average_type = test_duration / number_of_types
-            accuracy = number_of_hits / number_of_types
+            average_type = round(test_duration / number_of_types, 2)
+            accuracy = round(number_of_hits / number_of_types, 3)
 
         else:
             average_type = str("NONE")
             accuracy = str("NONE")
             
         if number_of_hits != 0 :
-            average_hit = test_duration / number_of_hits
+            average_hit = round(test_duration / number_of_hits, 2)
 
         else:
             average_hit = str("NONE")
 
         if number_of_types - number_of_hits > 0 :
-            average_miss = test_duration / (number_of_types - number_of_hits)
+            average_miss = round(test_duration / (number_of_types - number_of_hits), 2)
 
         else:
             average_miss = str("NONE")

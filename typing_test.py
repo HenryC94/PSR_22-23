@@ -40,7 +40,7 @@ def typeTest(mv, utm):
             print('Type letter '+ Fore.LIGHTBLUE_EX + to_press + Fore.WHITE)
 
             key_press = readkey()# Reads pressed key
-            finishinput_time = time.time() - start_input_time # Stores time of input duration
+            finishinput_time = round(time.time() - start_input_time, 3) # Stores time of input duration
 
             if ord(key_press) == 32: # If spacebar is pressed, the program stops
                 break
@@ -78,7 +78,7 @@ def typeTest(mv, utm):
             print('Type letter '+ Fore.LIGHTBLUE_EX + to_press + Fore.WHITE)
 
             key_press = readkey()
-            finishinput_time = time.time() - start_input_time
+            finishinput_time = round(time.time() - start_input_time, 3)
 
             if ord(key_press) == 32:
                 break
